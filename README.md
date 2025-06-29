@@ -26,19 +26,19 @@ This project demonstrates a rule-based algorithmic trading strategy on stock mar
 - Set your API key in the script/notebook using:
   ```python
   API_KEY = "YOUR_API_KEY"
-2. 📥 Data Collection
+###2. 📥 Data Collection
 Use the Alpha Vantage API to fetch daily stock price data.
 
 Save the data to a CSV file for reuse:
 df.to_csv("AAPL_historical_data.csv")
-3. 🧹 Data Preprocessing
+###3. 🧹 Data Preprocessing
 Load CSV into a DataFrame
 
 Parse dates, sort by time, and clean missing values
 
 Display summary statistics and structure
 
-4. 📊 Visualization
+###4. 📊 Visualization
 Plot historical closing prices
 
 Overlay moving averages:
@@ -47,7 +47,7 @@ Overlay moving averages:
 
 50-day Exponential Moving Average (EMA)
 
-5. 💹 Signal Generation
+###5. 💹 Signal Generation
 Define buy/sell signals using:
 
 Golden Cross (SMA 50 > SMA 200) → Buy
@@ -56,7 +56,7 @@ Death Cross (SMA 50 < SMA 200) → Sell
 
 Visualize crossover points
 
-6. 💰 Strategy Backtesting
+###6. 💰 Strategy Backtesting
 Simulate a portfolio with:
 
 Initial capital ($10,000)
@@ -69,7 +69,7 @@ Strategy portfolio value
 
 Buy & Hold value
 
-7. 📈 Advanced Indicators
+###7. 📈 Advanced Indicators
 Add:
 
 RSI (Relative Strength Index)
@@ -82,12 +82,12 @@ RSI < 30 and MACD Bullish → Buy
 
 RSI > 70 and MACD Bearish → Sell
 
-8. 📉 Improved Strategy
+###8. 📉 Improved Strategy
 Implement combined signal-based trading
 
 Track trades, portfolio value, and drawdowns
 
-9. 📊 Performance Metrics
+###9. 📊 Performance Metrics
 Total Return
 
 Number of Trades & Win Rate
