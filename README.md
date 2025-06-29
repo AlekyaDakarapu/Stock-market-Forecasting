@@ -1,6 +1,4 @@
-# Save the README content into a README.md file
-
-readme_content = """# 📈 Stock Market Forecasting & Trading Strategy using Technical Indicators
+# 📈 Stock Market Forecasting & Trading Strategy using Technical Indicators
 
 This project demonstrates a rule-based algorithmic trading strategy on stock market data using technical indicators like Moving Averages, RSI, and MACD. It retrieves historical data from Alpha Vantage API, generates buy/sell signals, and evaluates strategy performance compared to a Buy & Hold approach.
 
@@ -8,14 +6,15 @@ This project demonstrates a rule-based algorithmic trading strategy on stock mar
 
 ## 🧰 Project Structure
 
+```
 📁 stock-market-strategy
 │
-├── 📓 stock_strategy.ipynb # Main Jupyter Notebook
-├── 📄 AAPL_historical_data.csv # Sample stock data
-├── 📄 README.md # Project documentation
-├── 📄 requirements.txt # Python dependencies
-└── 🔑 (Optional) .env # Store your Alpha Vantage API key
-
+├── 📓 stock_strategy.ipynb           # Main Jupyter Notebook
+├── 📄 AAPL_historical_data.csv       # Sample stock data
+├── 📄 README.md                      # Project documentation
+├── 📄 requirements.txt               # Python dependencies
+└── 🔑 (Optional) .env                # Store your Alpha Vantage API key
+```
 
 ---
 
@@ -26,79 +25,113 @@ This project demonstrates a rule-based algorithmic trading strategy on stock mar
 - Set your API key in the script/notebook using:
   ```python
   API_KEY = "YOUR_API_KEY"
-###2. 📥 Data Collection
-Use the Alpha Vantage API to fetch daily stock price data.
+  ```
 
-Save the data to a CSV file for reuse:
-df.to_csv("AAPL_historical_data.csv")
-###3. 🧹 Data Preprocessing
-Load CSV into a DataFrame
+### 2. 📥 **Data Collection**
+- Use the Alpha Vantage API to fetch **daily stock price data**.
+- Save the data to a CSV file for reuse:
+  ```python
+  df.to_csv("AAPL_historical_data.csv")
+  ```
 
-Parse dates, sort by time, and clean missing values
+### 3. 🧹 **Data Preprocessing**
+- Load CSV into a DataFrame
+- Parse dates, sort by time, and clean missing values
+- Display summary statistics and structure
 
-Display summary statistics and structure
+### 4. 📊 **Visualization**
+- Plot historical closing prices
+- Overlay moving averages:
+  - 50-day and 200-day Simple Moving Average (SMA)
+  - 50-day Exponential Moving Average (EMA)
 
-###4. 📊 Visualization
-Plot historical closing prices
+### 5. 💹 **Signal Generation**
+- Define buy/sell signals using:
+  - Golden Cross (SMA 50 > SMA 200) → Buy
+  - Death Cross (SMA 50 < SMA 200) → Sell
+- Visualize crossover points
 
-Overlay moving averages:
+### 6. 💰 **Strategy Backtesting**
+- Simulate a portfolio with:
+  - Initial capital ($10,000)
+  - Trading decisions based on signal crossover
+- Track and plot:
+  - Strategy portfolio value
+  - Buy & Hold value
 
-50-day and 200-day Simple Moving Average (SMA)
+### 7. 📈 **Advanced Indicators**
+- Add:
+  - RSI (Relative Strength Index)
+  - MACD (Moving Average Convergence Divergence)
+- Combine them to refine signals:
+  - RSI < 30 and MACD Bullish → Buy
+  - RSI > 70 and MACD Bearish → Sell
 
-50-day Exponential Moving Average (EMA)
+### 8. 📉 **Improved Strategy**
+- Implement combined signal-based trading
+- Track trades, portfolio value, and drawdowns
 
-###5. 💹 Signal Generation
-Define buy/sell signals using:
+### 9. 📊 **Performance Metrics**
+- Total Return
+- Number of Trades & Win Rate
+- Max Drawdown
 
-Golden Cross (SMA 50 > SMA 200) → Buy
+---
 
-Death Cross (SMA 50 < SMA 200) → Sell
+## 🧪 Results
 
-Visualize crossover points
+- 📈 Strategy Return: **$10,000.00**
+- 💹 Win Rate: **nan%**
+- 📉 Max Drawdown: **0.00%**
+- ✅ Strategy outperformed Buy & Hold (if applicable)
 
-###6. 💰 Strategy Backtesting
-Simulate a portfolio with:
+---
 
-Initial capital ($10,000)
+## 📦 Installation
 
-Trading decisions based on signal crossover
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/stock-market-strategy.git
+   cd stock-market-strategy
+   ```
 
-Track and plot:
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Strategy portfolio value
+3. Run the Jupyter notebook:
+   ```bash
+   jupyter notebook
+   ```
 
-Buy & Hold value
+---
 
-###7. 📈 Advanced Indicators
-Add:
+## 📄 Requirements
 
-RSI (Relative Strength Index)
+Create a `requirements.txt` file with the following (or generate via `pip freeze > requirements.txt`):
 
-MACD (Moving Average Convergence Divergence)
+```
+pandas
+matplotlib
+requests
+yfinance
+```
 
-Combine them to refine signals:
+---
 
-RSI < 30 and MACD Bullish → Buy
+## 📜 License
 
-RSI > 70 and MACD Bearish → Sell
+This project is licensed under the MIT License.
 
-###8. 📉 Improved Strategy
-Implement combined signal-based trading
+---
 
-Track trades, portfolio value, and drawdowns
+## 👤 Author
 
-###9. 📊 Performance Metrics
-Total Return
+- **Alekya Dakarapu** – [Your GitHub Profile](https://github.com/AlekyaDakarapu)
 
-Number of Trades & Win Rate
+---
 
-Max Drawdown
+## 🙌 Contributing
 
-🧪 Results
-📈 Strategy Return: $10,000.00
-
-💹 Win Rate: 0.00%
-
-📉 Max Drawdown: 0.00%
-
-✅ Strategy outperformed Buy & Hold (if applicable)
+Pull requests are welcome! For major changes, please open an issue first to discuss.
